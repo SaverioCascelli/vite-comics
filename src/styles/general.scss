@@ -8,6 +8,7 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
 }
 
 img {
@@ -19,7 +20,10 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
     color: $primary-color;
+}
+
+body {
+    margin: 0 auto;
 }
