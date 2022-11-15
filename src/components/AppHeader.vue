@@ -1,6 +1,57 @@
     <script>
     export default {
-        name: 'AppHeader'
+        name: 'AppHeader',
+        data(){
+          return{
+          menu:[
+            {
+              text:"characters",
+              ref:"@",
+              current:false
+            },
+            {
+              text:"comics",
+              ref:"@",
+              current:false
+            }, 
+            {
+              text:"movies",
+              ref:"@",
+              current:false
+            },
+            {
+              text:"tv",
+              ref:"@",
+              current:false
+            },
+            {
+              text:"games",
+              ref:"@",
+              current:false
+            },
+            {
+              text:"videos",
+              ref:"@",
+              current:true
+            }, 
+            {
+              text:"fans",
+              ref:"@",
+              current:false
+            },
+            {
+              text:"news",
+              ref:"@",
+              current:false
+            },
+            {
+              text:"shop",
+              ref:"@",
+              current:false
+            },
+          ]
+        }
+      }
     }
     </script>
 
@@ -10,35 +61,11 @@
       <img src="/dc-logo.png" alt="">
     </div>
     <ul>
-      <li>
-        <a href="@"> characters</a>
-      </li>
-      <li>
-        <a href="@"> comics</a>
-      </li>
-      <li>
-        <a href="@"> movies</a>
-      </li>
-      <li>
-        <a href="@"> tv</a>
-      </li>
-      <li>
-        <a href="@">games</a>
-      </li>
-      <li>
-        <a href="@">collectables</a>
-      </li>
-      <li>
-        <a href="@">videos</a>
-      </li>
-      <li>
-        <a href="@">fans</a>
-      </li>
-      <li>
-        <a href="@">news</a>
-      </li>
-      <li>
-        <a href="@">shop</a>
+      <li
+      v-for="(link,index) in menu"
+      :key="index"
+      :class="{'active':link.current}">
+        <a :href="link.ref">{{link.text}}</a>
       </li>
     </ul>
   </header>
@@ -61,7 +88,8 @@
         @include centerFlex();
         height: 100%;
         border-bottom: 5px solid rgba(0,0,0,0);
-        &:hover{
+        &:hover,
+        &.active{
           border-bottom: 5px solid $primary-color;
         }
       
