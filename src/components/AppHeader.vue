@@ -5,10 +5,14 @@
     </script>
 
 <template>
-  <p>h</p>
+  <header>
+    <div class="logo">
+      <img src="/dc-logo.png" alt="">
+    </div>
+  </header>
 </template>
 
 
-<style>
+<style lang="scss" scoped>
 
 </style>
