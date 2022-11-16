@@ -1,12 +1,21 @@
     <script>
+    import TopFooter from './TopFooter.vue';
+    import BottomFooter from './BottomFooter.vue';
     export default {
-        name: 'AppFooter'
+        name: 'AppFooter',
+      components:{
+        TopFooter,
+        BottomFooter,
+
+      }
     }
     </script>
 
 <template>
-  <p>f</p>
+  <TopFooter/>
+  <BottomFooter/>
 </template>
+
 
 
 <style>
