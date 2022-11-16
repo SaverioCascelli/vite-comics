@@ -80,13 +80,14 @@
     @include centerFlex('vertical');
     justify-content: space-between;
     height: 200px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     ul{
       @include navListNoStyle('horizontal');
       height: 100%;
       li{
         @include centerFlex();
-        height: 100%;
+        max-height: 100%;
         border-bottom: 5px solid rgba(0,0,0,0);
         &:hover,
         &.active{

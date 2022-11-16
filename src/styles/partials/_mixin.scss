@@ -6,16 +6,18 @@
         text-decoration: none;
     }
 
-    li {
-        margin: 20px;
-    }
-
     @if $type =='vertical' {
         flex-direction: column;
+
+
     }
 
     @else if $type =='horizontal' {
         flex-direction: row;
+
+        li {
+            margin: 0px 10px 0px 10px;
+        }
     }
 }
 
