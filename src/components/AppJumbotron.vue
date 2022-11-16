@@ -6,7 +6,6 @@
 
 <template>
     <div class="wrapper">
-        <div class="container"><p>we</p></div>
     </div>
 </template>
 
@@ -16,7 +15,10 @@
 
     .wrapper{
         width: 100%;
-        background-color: black;
+        background-image: url('../assets/img/jumbotron.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
     }
     .container{
         margin: 0 auto;
